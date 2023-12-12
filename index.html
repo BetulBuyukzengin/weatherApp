@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- <div id="openweathermap-widget-11"></div>  -->
+    <main>
+      <div class="weather">
+        <div class="weather-input__section">
+          <input
+            type="text"
+            class="weather-input"
+            placeholder="Lütfen konum giriniz"
+          />
+          <i class="fa-solid fa-magnifying-glass search"></i>
+        </div>
+        <!-- arama iconu -->
+        <div class="weather-content">
+          <div class="weather-content__location">
+            <i class="fa-solid fa-location-dot location-icon"></i>
+            <h2 class="primary-title"></h2>
+          </div>
+          <div class="weather-content__state">
+            <p class="state__value-deg"><span class="state__value">4</span>°C</p>
+            <i class="fa-solid fa-cloud-rain state__icon"></i>
+          </div>
+          <div class="weather-content__info">
+            <div class="info__tempatures">
+              <label for="temp">Sıcaklık:</label>
+              <span id="temp">23</span>
+            </div>
+            <div class="info__humidity">
+              <label for="hum">Nem:</label>
+              <span id="hum">23</span>
+            </div>
+            <div class="info__wind">
+              <label for="wind">Rüzgar:</label>
+              <span id="wind">23</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="forecasts">
+         <!-- <div class="forecasts_days">
+          <div class="forecasts__date">12.01.1845</div>
+          <i class="fa-solid fa-snowflake forecasts-icon"></i>
+          <div class="forecasts-info">
+            <div class="forecasts-info__tempatures"></div>
+            <div class="forecasts-info__humidity"></div>
+          </div> -->
+        </div> 
+        <!-- JS TEN GELECEKLER -->
+ <!--        <div class="forecasts_days">
+          <div class="forecasts__date">12.01.1845</div>
+          <i class="fa-solid fa-cloud-sun forecasts-icon"></i>
+          <div class="forecasts-info">
+            <div class="forecasts-info__tempatures">24°</div>
+            <div class="forecasts-info__humidity">12°</div>
+          </div>
+        </div>
+        <div class="forecasts_days">
+          <div class="forecasts__date">12.01.1845</div>
+          <i class="fa-solid fa-cloud-sun-rain forecasts-icon"></i>
+          <div class="forecasts-info">
+            <div class="forecasts-info__tempatures">24°</div>
+            <div class="forecasts-info__humidity">12°</div>
+          </div>
+        </div>
+        <div class="forecasts_days">
+          <div class="forecasts__date">12.01.1845</div>
+          <i class="fa-solid fa-cloud-rain forecasts-icon"></i>
+          <div class="forecasts-info">
+            <div class="forecasts-info__tempatures">24°</div>
+            <div class="forecasts-info__humidity">12°</div>
+          </div>
+        </div>
+        <div class="forecasts_days">
+          <div class="forecasts__date">12.01.1845</div>
+          <i class="fa-solid fa-sun forecasts-icon"></i>
+          <div class="forecasts-info">
+            <div class="forecasts-info__tempatures">24°</div>
+            <div class="forecasts-info__humidity">12°</div>
+          </div>
+        </div>
+ -->
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
