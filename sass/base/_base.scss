@@ -1,0 +1,100 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  // box-sizing: inherit;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  /*0.625*100=62.5%*/
+  font-size: 62.5%;
+
+  @include respond(tab-land) {
+    // width <1200?
+    font-size: 56.25%; //1 rem=9px, 9/16*100=56.25%
+  }
+  @include respond(tab-port) {
+    // width<900?
+    font-size: 50%; //1 rem=8px, 8/16=50%
+    
+    ::-webkit-scrollbar {
+      width: 1rem;
+    }
+
+    // Track
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px $color-gray;
+      border-radius: 1rem;
+    }
+
+    // Handle
+    ::-webkit-scrollbar-thumb {
+      background: $color-white;
+      border-radius: 1rem;
+    }
+  }
+  @include respond(phone) {
+    // width<600?
+    font-size: 50%;
+    // width
+    ::-webkit-scrollbar {
+      width: 1rem;
+    }
+
+    // Track
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px $color-gray;
+      border-radius: 1rem;
+    }
+
+    // Handle
+    ::-webkit-scrollbar-thumb {
+      background: $color-white;
+      border-radius: 1rem;
+    }
+  }
+  @include respond(big-desktop) {
+    font-size: 75%; //1 rem=12, 12/16
+  }
+}
+/* 1 rem=10px */
+
+body {
+  background-image: linear-gradient(
+    to right bottom,
+    #2a5c9f,
+    #476ea7,
+    #6180ae,
+    #7a92b4,
+    #93a4bb,
+    #9cacc1,
+    #a6b4c8,
+    #afbcce,
+    #aabcd6,
+    #a4bcde,
+    #9fbbe5,
+    #9abbed
+  );
+  background-repeat: no-repeat;
+}
+
+// body {
+//   background-image: linear-gradient(
+//     to right bottom,
+//     $color-body-background1,
+//     $color-body-background2,
+//     $color-body-background3,
+//     $color-body-background4,
+//     $color-body-background5,
+//     $color-body-background6,
+//     $color-body-background7,
+//     $color-body-background8,
+//     $color-body-background9,
+//     $color-body-backgrounda,
+//     $color-body-backgroundb,
+//     $color-body-backgroundc
+//   );
+//   background-repeat: no-repeat;
+// }

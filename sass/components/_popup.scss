@@ -1,0 +1,48 @@
+.popup {
+  &text {
+    position: absolute;
+    top: 2rem;
+    left: 5rem;
+    height: 3.5rem;
+    opacity: 0;
+    visibility: hidden;
+    /* cursor: pointer; */
+    display: flex;
+    border-radius: 5px;
+    background-color: $color-gray;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: all 0.5s cubic-bezier(0.47, 0.46, 0.81, 0.42);
+    clip-path: polygon(
+      0% 0%,
+      100% 0%,
+      100% 78%,
+      87% 78%,
+      85% 91%,
+      75% 82%,
+      0% 79%
+    );
+    padding: 1% 2%;
+    text-align: center;
+    width: 10%;
+    transform: translateY(-85px) translateX(-3rem);
+
+    @include respond(tab-land){
+      padding: 1% 6%;
+      height: 6.5rem;
+  
+    }
+    @include respond(phone){
+      padding: 1rem 3rem;
+      height: 6.5rem;
+      width: 10rem;
+    }
+  }
+
+
+  &-show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) translateX(-3rem);
+  }
+}

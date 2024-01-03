@@ -1,0 +1,21 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "watch:sass": "sass sass/main.scss css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass"
+  },
+  "author": "Betul Buyukzengin",
+  "license": "ISC",
+  "browserslist": "last 10 versions",
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "globby": "^14.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^10.1.0",
+    "sass": "^1.69.6"
+  }
+}
