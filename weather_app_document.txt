@@ -1,6 +1,0 @@
-ALINACAK BİLGİLER: (temperature) sıcaklık-nem(humudity) - durum(description,bulutlu-gunesli)
-
-YAPILACAKLAR:
-*Kullanıcının konumunu alarak hava durumu bilgilerini göstersin.
-*Kullanıcı istediği konumun adını girerek(şehir,ülke) hava durumu bilgilerine erişsin.
-
