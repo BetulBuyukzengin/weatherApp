@@ -9,7 +9,6 @@
 <br>
 
 ## ✨Projenin görselleri :
-<img src="./readme-img/weatherApp1.png">
 <img src="./readme-img/weatherApp2.png">
 
 
