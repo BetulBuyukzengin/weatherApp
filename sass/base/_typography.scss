@@ -1,40 +1,46 @@
 .primary-title {
-  /* font-size: 22px; */
   font-size: 3rem;
   letter-spacing: 2px;
-  @include respond(big-desktop){
+  @include respond(big-desktop) {
     font-size: 6rem;
   }
-  @include respond(tab-port){
+  @include respond(tab-port) {
     font-size: 3.5rem;
   }
-  @include respond(phone){
+  @include respond(phone) {
     font-size: 3.5rem;
   }
 }
-.weather-input{ 
+.weather {
+  &_info--text {
+    @include respond(phone) {
+      margin-right: 1rem;
+    }
+  }
+  &-input {
     &::placeholder {
       color: $color-blue-dark;
       opacity: 1;
       font-size: 12px;
       letter-spacing: 2px;
       transition: all 0.4s;
-      @include respond(big-desktop){
-        font-size:2rem ;
+      @include respond(big-desktop) {
+        font-size: 2rem;
       }
     }
+  }
 }
+
 .state {
   &__value-deg {
-    /* font-size: 50px; */
     margin-right: 1rem;
     font-size: 5rem;
     font-weight: bold;
     letter-spacing: 2px;
-    @include respond(big-desktop){
+    @include respond(big-desktop) {
       font-size: 9rem;
     }
-    @include respond(tab-port){
+    @include respond(tab-port) {
       margin-right: 3rem;
       font-size: 6rem;
     }
@@ -45,7 +51,6 @@
   &__icon {
     font-size: 50px;
     margin-left: 7%;
-  
   }
 }
 
@@ -54,30 +59,29 @@
     margin-bottom: 8%;
     font-size: 1rem;
     letter-spacing: 1.5px;
-    @include respond(big-desktop){
+    @include respond(big-desktop) {
       font-size: 1.8rem;
     }
-    @include respond(tab-port){
+    @include respond(tab-port) {
       font-size: 1.3rem;
     }
-    @include respond(phone){
+    @include respond(phone) {
       font-size: 1.3rem;
     }
   }
   &-info {
     display: flex;
-    /* width: 30%; */
     justify-content: space-between;
     font-size: 1.8rem;
 
-    @include respond(big-desktop){
+    @include respond(big-desktop) {
       font-size: 2.5rem;
     }
-   
-    @include respond(tab-port){
+
+    @include respond(tab-port) {
       font-size: 2.5rem;
     }
-    @include respond(phone){
+    @include respond(phone) {
       font-size: 2rem;
     }
   }

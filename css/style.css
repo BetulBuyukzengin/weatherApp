@@ -1,4 +1,3 @@
-@charset "UTF-8";
 *,
 *::after,
 *::before {
@@ -61,7 +60,6 @@ body {
 }
 
 .primary-title {
-  /* font-size: 22px; */
   font-size: 3rem;
   letter-spacing: 2px;
 }
@@ -81,6 +79,11 @@ body {
   }
 }
 
+@media only screen and (max-width: 37.5em) {
+  .weather_info--text {
+    margin-right: 1rem;
+  }
+}
 .weather-input::placeholder {
   color: #1f256e;
   opacity: 1;
@@ -95,7 +98,6 @@ body {
 }
 
 .state__value-deg {
-  /* font-size: 50px; */
   margin-right: 1rem;
   font-size: 5rem;
   font-weight: bold;
@@ -142,7 +144,6 @@ body {
 }
 .forecasts-info {
   display: flex;
-  /* width: 30%; */
   justify-content: space-between;
   font-size: 1.8rem;
 }
@@ -169,7 +170,6 @@ body {
   height: 3.5rem;
   opacity: 0;
   visibility: hidden;
-  /* cursor: pointer; */
   display: flex;
   border-radius: 5px;
   background-color: #74768f;
@@ -202,7 +202,6 @@ body {
 }
 
 main {
-  /* background-image: linear-gradient(to right bottom, #2a5c9f, #476ea7, #6180ae, #7a92b4, #93a4bb, #9cacc1, #a6b4c8, #afbcce, #aabcd6, #a4bcde, #9fbbe5, #9abbed); */
   height: 100vh;
   color: #ffffff;
   position: relative;
@@ -222,11 +221,45 @@ main {
     height: 60dvh;
   }
 }
+@media only screen and (max-width: 75em) {
+  .weather {
+    justify-content: space-evenly;
+  }
+}
 @media only screen and (max-width: 56.25em) {
   .weather {
     height: 46dvh;
-    margin-bottom: 2rem;
+    margin-bottom: 6rem;
     padding: 2rem 3rem 0 3rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .weather {
+    height: 45dvh;
+    margin-bottom: 10rem;
+    justify-content: space-around;
+  }
+}
+.weather_container-elStart {
+  display: flex;
+  width: 100%;
+}
+@media only screen and (max-width: 56.25em) {
+  .weather_container-elStart {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    text-align: start;
+    line-height: 3.5rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .weather_container-elStart {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    text-align: start;
+    line-height: 3.5rem;
   }
 }
 .weather-input {
@@ -235,7 +268,7 @@ main {
   border: none;
   background: rgba(255, 255, 255, 0.8);
   position: relative;
-  transition: all 0.5s ease; /* Geçiş efekti */
+  transition: all 0.5s ease;
   font-weight: bold;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
 }
@@ -259,8 +292,8 @@ main {
 }
 .weather-input:focus::placeholder {
   transform: translateY(30px);
-  opacity: 0; /* Kullanıcı giriş yapmaya başladığında placeholder kaybolur */
-  transition: opacity 0.5s ease, transform 0.5s ease; /* Geçiş efekti */
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 .weather-input:focus + .search {
   transition: all 0.3s;
@@ -289,7 +322,7 @@ main {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 70%;
+  width: 100%;
   height: 10vh;
   background-image: linear-gradient(to right, rgba(45, 49, 58, 0.1), rgba(0, 0, 0, 0.1));
   letter-spacing: 1.3px;
@@ -306,17 +339,18 @@ main {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    line-height: 2.5rem;
     height: 12vh;
   }
 }
 @media only screen and (max-width: 37.5em) {
   .weather-content__info {
     flex-direction: column;
+    display: flex;
   }
 }
 .weather-content__info .weather_info {
   font-size: 1.5rem;
+  width: 100%;
 }
 @media only screen and (min-width: 112.5em) {
   .weather-content__info .weather_info {
@@ -328,9 +362,6 @@ main {
     font-size: 2rem;
   }
 }
-.weather-content__info .weather_info:not(:last-child) {
-  margin-right: 4%;
-}
 .weather-content__state {
   width: 100%;
   display: flex;
@@ -341,6 +372,11 @@ main {
 @media only screen and (max-width: 56.25em) {
   .weather-content__state {
     margin: 1rem 0 1rem 0;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .weather-content__state {
+    margin: 2rem 0 5rem 0;
   }
 }
 .weather-content__location {
@@ -382,13 +418,12 @@ main {
 
 .forecasts {
   display: flex;
-  margin-top: 1%;
   padding: 2rem 0;
   background-image: linear-gradient(to right, rgba(45, 49, 58, 0.1), rgba(0, 0, 0, 0.1));
 }
 @media only screen and (min-width: 112.5em) {
   .forecasts {
-    margin-top: 1%;
+    margin-top: 4rem;
     padding: 3rem 0;
   }
 }
@@ -397,7 +432,12 @@ main {
     flex-direction: column;
     align-items: center;
     overflow: scroll;
-    height: 30rem;
+    height: 50rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .forecasts {
+    height: 46rem;
   }
 }
 .forecasts_days {
