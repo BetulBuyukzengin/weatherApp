@@ -1,6 +1,6 @@
 
 <h1>Weather-App</h1>
-## Bu uygulamada api kullanrak  Weather-App uygulamasını oluşturdum.
+## Bu uygulamada weather api kullanarak  Weather-App uygulamasını oluşturdum.
 
 ### Uygulama hakkında:
 * Uygulamayı açtığınızda sizden konumunuza erişim izni isteyecek ve izin verildiği takdirde konumunuza ait hava durumu bilgileri gösterilecek.
