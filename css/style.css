@@ -218,7 +218,7 @@ main {
 @media only screen and (min-width: 112.5em) {
   .weather {
     padding: 2rem 3rem 0 3rem;
-    height: 60dvh;
+    height: 62dvh;
   }
 }
 @media only screen and (max-width: 75em) {
@@ -228,16 +228,16 @@ main {
 }
 @media only screen and (max-width: 56.25em) {
   .weather {
-    height: 46dvh;
-    margin-bottom: 6rem;
+    height: 50dvh;
+    margin-bottom: 4rem;
     padding: 2rem 3rem 0 3rem;
   }
 }
 @media only screen and (max-width: 37.5em) {
   .weather {
-    height: 45dvh;
-    margin-bottom: 10rem;
-    justify-content: space-around;
+    justify-content: space-between;
+    height: 58dvh;
+    margin-bottom: 2rem;
   }
 }
 .weather_container-elStart {
@@ -247,19 +247,16 @@ main {
 @media only screen and (max-width: 56.25em) {
   .weather_container-elStart {
     display: flex;
-    width: 50%;
-    flex-direction: column;
+    width: 100%;
+    flex-direction: row;
     text-align: start;
     line-height: 3.5rem;
   }
 }
 @media only screen and (max-width: 37.5em) {
   .weather_container-elStart {
-    display: flex;
-    width: 50%;
+    width: 100%;
     flex-direction: column;
-    text-align: start;
-    line-height: 3.5rem;
   }
 }
 .weather-input {
@@ -344,8 +341,12 @@ main {
 }
 @media only screen and (max-width: 37.5em) {
   .weather-content__info {
+    width: 100%;
     flex-direction: column;
     display: flex;
+    height: 20vh;
+    padding: 1rem 2rem;
+    width: 67%;
   }
 }
 .weather-content__info .weather_info {
@@ -360,6 +361,12 @@ main {
 @media only screen and (max-width: 56.25em) {
   .weather-content__info .weather_info {
     font-size: 2rem;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .weather-content__info .weather_info {
+    font-size: 1.5rem;
   }
 }
 .weather-content__state {
@@ -376,7 +383,7 @@ main {
 }
 @media only screen and (max-width: 37.5em) {
   .weather-content__state {
-    margin: 2rem 0 5rem 0;
+    margin: 0rem 0 1rem 0;
   }
 }
 .weather-content__location {
@@ -432,12 +439,12 @@ main {
     flex-direction: column;
     align-items: center;
     overflow: scroll;
-    height: 50rem;
+    height: 19rem;
   }
 }
 @media only screen and (max-width: 37.5em) {
   .forecasts {
-    height: 46rem;
+    height: 16rem;
   }
 }
 .forecasts_days {
@@ -473,6 +480,11 @@ main {
   .forecasts__date {
     font-size: 1.8rem;
     padding: 0.4rem 6rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .forecasts__date {
+    padding: 0.4rem 3rem;
   }
 }
 .forecasts-icon {
