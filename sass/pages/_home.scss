@@ -132,7 +132,7 @@ main {
         width: 100%;
         flex-direction: column;
         display: flex;
-        height: 20vh;
+        height: 15vh;
         padding: 1rem 2rem;
         width: 67%;
       }
@@ -224,10 +224,10 @@ main {
     flex-direction: column;
     align-items: center;
     overflow: scroll;
-    height: 19rem;
+    height: 46rem;
   }
   @include respond(phone) {
-    height: 16rem;
+    height:40rem;
   }
 
   &_days {
