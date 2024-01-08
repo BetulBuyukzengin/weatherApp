@@ -29,7 +29,7 @@ main {
     padding: 2rem 3rem 0 3rem;
   }
   @include respond(phone) {
-    justify-content: space-between;
+    justify-content: space-around;
     height: 58dvh;
     margin-bottom: 2rem;
   }
