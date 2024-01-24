@@ -185,14 +185,15 @@ body {
 @media only screen and (max-width: 75em) {
   .popuptext {
     padding: 1% 6%;
-    height: 6.5rem;
+    height: 5.5rem;
+    width: 20rem;
   }
 }
 @media only screen and (max-width: 37.5em) {
   .popuptext {
-    padding: 1rem 3rem;
-    height: 6.5rem;
-    width: 10rem;
+    padding: 0.8rem 6rem;
+    height: 4.5rem;
+    width: 11rem;
   }
 }
 .popup-show {
@@ -275,11 +276,21 @@ main {
     font-size: 2.5rem;
   }
 }
+@media only screen and (max-width: 37.5em) {
+  .weather-input {
+    padding: 4% 22%;
+  }
+}
 .weather-input__section {
   display: flex;
   justify-content: flex-end;
   width: 100%;
   align-items: center;
+}
+@media only screen and (max-width: 37.5em) {
+  .weather-input__section {
+    justify-content: center;
+  }
 }
 .weather-input:focus {
   outline: none;
@@ -395,6 +406,11 @@ main {
 
 .search {
   position: absolute;
+  display: flex;
+  width: 3%;
+  justify-content: center;
+}
+.searchImg {
   text-align: center;
   color: #1f256e;
   height: 2.5rem;
@@ -405,9 +421,18 @@ main {
   transition: all 0.5s ease;
 }
 @media only screen and (min-width: 112.5em) {
-  .search {
+  .searchImg {
     height: 4.5rem;
     width: 4.5rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .search {
+    width: 60%;
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
 }
 
