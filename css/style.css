@@ -406,11 +406,6 @@ main {
 
 .search {
   position: absolute;
-  display: flex;
-  width: 3%;
-  justify-content: center;
-}
-.searchImg {
   text-align: center;
   color: #1f256e;
   height: 2.5rem;
@@ -421,18 +416,14 @@ main {
   transition: all 0.5s ease;
 }
 @media only screen and (min-width: 112.5em) {
-  .searchImg {
+  .search {
     height: 4.5rem;
     width: 4.5rem;
   }
 }
 @media only screen and (max-width: 37.5em) {
   .search {
-    width: 60%;
-    position: absolute;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    right: 13rem;
   }
 }
 
