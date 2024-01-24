@@ -32,6 +32,8 @@ main {
     justify-content: space-around;
     height: 58dvh;
     margin-bottom: 2rem;
+    // height: 62dvh;
+
   }
 
   &_container-elStart {
@@ -219,9 +221,7 @@ main {
 
 .forecasts {
   display: flex;
-
   padding: 2rem 0;
-
   background-image: linear-gradient(
     to right,
     $color-black-light,
@@ -241,6 +241,7 @@ main {
   }
   @include respond(phone) {
     height: 40rem;
+    // height: 36rem;
   }
 
   &_days {
