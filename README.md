@@ -1,7 +1,5 @@
 
 <h1> 🌦 Weather-App</h1>
-## Bu uygulamada weather api kullanarak  Weather-App uygulamasını oluşturdum.
-
 
 ## 🔴Projenin deploy edilmiş versiyonu :
  <h3><a href="https://weather-app-betul.netlify.app/">Mapty-App</a></h3>
