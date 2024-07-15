@@ -2,7 +2,7 @@
 <h1> 🌦 Weather-App</h1>
 
 ## 🔴Projenin deploy edilmiş versiyonu :
- <h3><a href="https://weather-app-betul.netlify.app/">Mapty-App</a></h3>
+ <h3><a href="https://weather-app-betul.netlify.app/">Weather App</a></h3>
  
 ### Uygulama hakkında:
 * Uygulamayı açtığınızda sizden konumunuza erişim izni isteyecek ve izin verildiği takdirde konumunuza ait hava durumu bilgileri gösterilecek.
