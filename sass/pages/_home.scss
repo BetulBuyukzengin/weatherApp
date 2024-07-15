@@ -2,9 +2,8 @@ main {
   height: 100vh;
   color: $color-white;
   position: relative;
-    @include respond(tab-land) {
-    height:auto;
-  
+    @include respond(phone) {
+    height:auto; 
   }
 }
 .weather {
