@@ -1,5 +1,7 @@
-"use-strict";
+// "use-strict";
+
 const cityName = document.querySelector(".primary-title");
+const forecasts = document.querySelector(".forecasts");
 const cityTemp = document.querySelector(".forecasts-info__tempatures");
 const cityHum = document.querySelector(".forecasts-info__humidity");
 const today_hum = document.querySelector("#hum");
@@ -12,6 +14,25 @@ const searchIcon = document.querySelector(".search");
 const popup = document.getElementById("myPopup");
 const wetContentState = document.querySelector(".weather-content__state");
 
+function triggerToast(text) {
+  return Toastify({
+    text: text,
+    duration: 8000,
+    close: true,
+    gravity: "top", // `top` or `bottom`
+    position: "left", // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+
+    onClick: function () {}, // Callback after click
+  }).showToast();
+}
+function notFound() {
+  const html = `
+  <p>Hava durumu bilgisi için arama yapın veya konumuzu erişilebilir olarak ayarlayın.</p>
+  `;
+  info.insertAdjacentHTML("beforeend", html);
+  forecasts.style.visibility = "hidden";
+}
 // Data split
 const dayValues = [1, 2, 3, 4, 5];
 let start;
@@ -41,7 +62,6 @@ const weatherIcons = {
   "50n": "icons/mist.png",
 };
 
-const forecasts = document.querySelector(".forecasts");
 const API_KEY = "8f66252b881bec05dc29e9a4464bb00f";
 
 // Get location
@@ -52,9 +72,10 @@ const getPosition = function () {
         const lat = position.coords.latitude;
         const lon = position.coords.longitude;
         resolve({ lat, lon });
+        forecasts.style.visibility = "visible";
       },
       function () {
-        reject(() => displayPopup());
+        reject(() => notFound());
       }
     );
   });
@@ -87,7 +108,6 @@ const getJSONLocation = async function () {
     const { city, list } = data;
     cityName.textContent = city.name;
 
-   
     const controlForecasts = function (forrecasts) {
       forrecasts.map((data) => {
         const weatherCondition = createWeatherObject(data).icon;
@@ -140,14 +160,13 @@ const getJSONLocation = async function () {
     };
     get_dayData(dayValues);
   } catch (err) {
-    displayPopup("location");
-    console.error("Lokasyon alinamadi");
+    triggerToast("Konumunuza erişilemedi");
+    notFound();
   }
 };
 
 const controlInfo = function (oneDay) {
   info.innerHTML = "";
-
   day = oneDay[0];
   const todayInfo = {
     description: day.weather[0].description,
@@ -159,7 +178,7 @@ const controlInfo = function (oneDay) {
 
   const weatherInfoCondition = createWeatherObject(day).icon;
 
-  const weat_infoIcon = ` 
+  const weat_infoIcon = `
   <p class="state__value-deg"><span class="state__value"></span>${
     todayInfo.temp
   }°C</p>
@@ -204,17 +223,6 @@ const getFormCity = inputForm.addEventListener("submit", function (event) {
   getCity();
 });
 
-
-// Display popup
-const displayPopup = function (location) {
-  if (location) popup.innerHTML = `Can't take your location. Please allow us!`;
-
-  popup.classList.add("popup-show");
-  setTimeout(function () {
-    popup.classList.remove("popup-show");
-  }, 3000);
-};
-
 //  api call
 const getJSONBySearch = async function (searchCity) {
   try {
@@ -224,18 +232,16 @@ const getJSONBySearch = async function (searchCity) {
     const data = await res.json();
     const { city, list } = data;
 
-  
-    if (!city) displayPopup();
-
+    if (!city) triggerToast("Lütfen geçerli bir konum giriniz!");
+    forecasts.style.visibility = "visible";
     cityName.innerHTML = city.name;
-   
+
     const displaySearchForecasts = function (searchForecast) {
-     
       forecasts.innerHTML = "";
       searchForecast.map((data) => {
         const date = data.dt_txt.slice(0, 10);
 
-        //* translate format 
+        //* translate format
         const transformDate = new Date(date);
         const options = { year: "numeric", month: "2-digit", day: "2-digit" };
         const newDate = transformDate.toLocaleDateString("tr-TR", options);
@@ -279,12 +285,10 @@ const getJSONBySearch = async function (searchCity) {
     get_forecastSearchData(dayValues);
 
     //********* */
-  } catch (err) {
-    console.error(err);
-  }
+  } catch (err) {}
 };
 searchIcon.addEventListener("click", getCity);
-const init = function () {
-  getJSONLocation();
-};
-init();
+// const init = function () {
+getJSONLocation();
+// };
+// init();
