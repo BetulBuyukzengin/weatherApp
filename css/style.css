@@ -55,21 +55,7 @@ html {
 
 /* 1 rem=10px */
 body {
-  background-image: linear-gradient(
-    to right bottom,
-    #2a5c9f,
-    #476ea7,
-    #6180ae,
-    #7a92b4,
-    #93a4bb,
-    #9cacc1,
-    #a6b4c8,
-    #afbcce,
-    #aabcd6,
-    #a4bcde,
-    #9fbbe5,
-    #9abbed
-  );
+  background-image: linear-gradient(to right bottom, #2a5c9f, #476ea7, #6180ae, #7a92b4, #93a4bb, #9cacc1, #a6b4c8, #afbcce, #aabcd6, #a4bcde, #9fbbe5, #9abbed);
   background-repeat: no-repeat;
 }
 
@@ -84,13 +70,13 @@ body {
 }
 @media only screen and (max-width: 56.25em) {
   .primary-title {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
   }
 }
 @media only screen and (max-width: 37.5em) {
-  /* .primary-title {
+  .primary-title {
     font-size: 3.5rem;
-  } */
+  }
 }
 
 @media only screen and (max-width: 37.5em) {
@@ -125,7 +111,7 @@ body {
 @media only screen and (max-width: 56.25em) {
   .state__value-deg {
     margin-right: 3rem;
-    font-size: 4rem;
+    font-size: 6rem;
   }
 }
 .state__value {
@@ -153,7 +139,7 @@ body {
 }
 @media only screen and (max-width: 37.5em) {
   .forecasts-date {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 }
 .forecasts-info {
@@ -190,15 +176,7 @@ body {
   font-size: 13px;
   letter-spacing: 1px;
   transition: all 0.5s cubic-bezier(0.47, 0.46, 0.81, 0.42);
-  clip-path: polygon(
-    0% 0%,
-    100% 0%,
-    100% 78%,
-    87% 78%,
-    85% 91%,
-    75% 82%,
-    0% 79%
-  );
+  clip-path: polygon(0% 0%, 100% 0%, 100% 78%, 87% 78%, 85% 91%, 75% 82%, 0% 79%);
   padding: 1% 2%;
   text-align: center;
   width: 10%;
@@ -227,6 +205,11 @@ body {
 main {
   color: #ffffff;
   position: relative;
+}
+@media only screen and (min-width: 112.5em) {
+  main {
+    height: 100dvh;
+  }
 }
 @media only screen and (max-width: 112em) {
   main {
@@ -317,12 +300,11 @@ main {
   justify-content: flex-end;
   width: 100%;
   align-items: center;
-  position: relative;
 }
 @media only screen and (max-width: 37.5em) {
-  /* .weather-input__section {
+  .weather-input__section {
     justify-content: center;
-  } */
+  }
 }
 .weather-input:focus {
   outline: none;
@@ -363,16 +345,10 @@ main {
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  /* height: 10vh; */
-  padding: 5rem 3rem;
-  background-image: linear-gradient(
-    to right,
-    rgba(45, 49, 58, 0.1),
-    rgba(0, 0, 0, 0.1)
-  );
+  height: 10vh;
+  background-image: linear-gradient(to right, rgba(45, 49, 58, 0.1), rgba(0, 0, 0, 0.1));
   letter-spacing: 1.3px;
   border-radius: 7px;
-  font-size: 16px;
 }
 @media only screen and (max-width: 75em) {
   .weather-content__info {
@@ -385,7 +361,6 @@ main {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    font-size: 12px;
     height: 12vh;
   }
 }
@@ -394,7 +369,14 @@ main {
     width: 100%;
     flex-direction: column;
     display: flex;
+    height: 15vh;
     padding: 1rem 2rem;
+    width: 67%;
+  }
+}
+@media only screen and (min-width: 112.5em) {
+  .weather-content__info {
+    font-size: 2rem;
   }
 }
 .weather-content__info .weather_info {
@@ -422,7 +404,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 3% 0 3% 0;
+  margin: 5% 0 5% 0;
 }
 @media only screen and (max-width: 56.25em) {
   .weather-content__state {
@@ -451,7 +433,6 @@ main {
   padding: 1%;
   margin: 0 1%;
   transition: all 0.5s ease;
-  right: 0;
 }
 @media only screen and (min-width: 112.5em) {
   .search {
@@ -460,9 +441,9 @@ main {
   }
 }
 @media only screen and (max-width: 37.5em) {
-  /* .search {
+  .search {
     right: 13rem;
-  } */
+  }
 }
 
 .location-icon {
@@ -480,11 +461,7 @@ main {
 .forecasts {
   display: flex;
   padding: 2rem 0;
-  background-image: linear-gradient(
-    to right,
-    rgba(45, 49, 58, 0.1),
-    rgba(0, 0, 0, 0.1)
-  );
+  background-image: linear-gradient(to right, rgba(45, 49, 58, 0.1), rgba(0, 0, 0, 0.1));
 }
 @media only screen and (min-width: 112.5em) {
   .forecasts {
@@ -543,7 +520,6 @@ main {
 @media only screen and (max-width: 37.5em) {
   .forecasts__date {
     padding: 0.4rem 3rem;
-    font-size: 1rem;
   }
 }
 .forecasts-icon {
@@ -563,7 +539,7 @@ main {
 }
 @media only screen and (max-width: 37.5em) {
   .forecasts-icon {
-    width: 3rem;
+    width: 6rem;
   }
 }
 .forecasts-info__tempatures {
@@ -588,6 +564,13 @@ main {
 }
 @media only screen and (max-width: 56.25em) {
   .state-icon {
-    width: 5rem;
+    width: 11rem;
   }
 }
+@media only screen and (max-width: 37.5em) {
+  .state-icon {
+    width: 10rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -2,6 +2,9 @@ main {
   // height: 100vh;
   color: $color-white;
   position: relative;
+  @include respond(big-desktop) {
+    height: 100dvh;
+  }
   @include respond(laptop) {
     height: 100dvh;
   }
@@ -142,6 +145,10 @@ main {
         height: 15vh;
         padding: 1rem 2rem;
         width: 67%;
+      }
+
+      @include respond(big-desktop) {
+        font-size: 2rem;
       }
 
       & .weather_info {
