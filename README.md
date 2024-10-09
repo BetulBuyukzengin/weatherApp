@@ -2,9 +2,8 @@
 # 🌦 Weather-App
 * JS ile yaptığım hava durumu uygulamasıdır.
 
-## 🔴Projenin deploy edilmiş versiyonu :
- <h3><a href="https://weather-app-betul.netlify.app/">Weather App</a></h3>
- 
+## Canlı versiyon : <a href="https://weather-app-betul.netlify.app/">Weather App</a>
+
 ### Uygulama hakkında:
 * Veriler apiden fetch kullanarak yakalandı.
 * Uygulamayı açtığınızda sizden konumunuza erişim izni isteyecek ve izin verildiği takdirde konumunuza ait hava durumu bilgileri gösterilecek.
