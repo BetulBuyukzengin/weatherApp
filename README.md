@@ -21,5 +21,5 @@
 * Geolocation API
 * Fetch API
 * Toastify.js
-* LocaleDateString 
+
 
